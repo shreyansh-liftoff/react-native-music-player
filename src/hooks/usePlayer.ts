@@ -54,7 +54,6 @@ const usePlayer = ({
     const progressEventHandler = eventHandler.addListener(
       'onAudioProgress',
       (event: any) => {
-        console.log('Progress event', event);
         const { currentTime, progress } = event;
         setCurrentTime(currentTime);
         setCurrentProgress(progress * 100);
@@ -83,7 +82,6 @@ const usePlayer = ({
   const getDuration = useCallback(async () => {
     try {
       const duration: number = await AudioModule.getTotalDuration(sourceUrl);
-      console.log('Duration', duration);
       setTotalDuration(duration);
     } catch (error) {
       console.error('Error getting duration', error);
@@ -128,7 +126,6 @@ const usePlayer = ({
         elapsedTime + seekInterval > totalDuration
           ? totalDuration
           : elapsedTime + seekInterval;
-      console.log('Seeking forward to', seekTo);
       await AudioModule.seek(seekTo);
     } catch (error) {
       console.error('Error seeking forward', error);
@@ -139,7 +136,6 @@ const usePlayer = ({
     try {
       const seekTo =
         elapsedTime - seekInterval < 0 ? 0 : elapsedTime - seekInterval;
-      console.log('Seeking backward to', seekTo);
       await AudioModule.seek(seekTo);
     } catch (error) {
       console.error('Error seeking backward', error);

@@ -1,6 +1,6 @@
 {
   "name": "@shreyanshsingh/react-native-audio-player",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "audio player library for react native with rich feature controls and background audio support",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -72,6 +72,7 @@
     "@release-it/conventional-changelog": "^9.0.2",
     "@types/jest": "^29.5.5",
     "@types/react": "^18.2.44",
+    "@types/react-native-vector-icons": "^6.4.18",
     "commitlint": "^17.0.2",
     "del-cli": "^5.1.0",
     "eslint": "^8.51.0",
@@ -200,5 +201,8 @@
     "type": "turbo-module",
     "languages": "kotlin-objc",
     "version": "0.47.0"
+  },
+  "dependencies": {
+    "react-native-vector-icons": "^10.2.0"
   }
 }
