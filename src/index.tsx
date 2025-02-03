@@ -1,5 +1,3 @@
-import MusicPlayer from './NativeMusicPlayer';
+import usePlayer from './hooks/usePlayer';
 
-export function multiply(a: number, b: number): number {
-  return MusicPlayer.multiply(a, b);
-}
+export const usePlayerHook = usePlayer;
