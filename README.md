@@ -18,9 +18,7 @@
 
 ## Installation
 
-Before using this hook, ensure that your project is set up to use native modules for audio playback. If you're using a library for audio control, make sure it is linked properly in your project.
+Before using this hook, ensure that your project is set up to use native modules. You can install the `@shreyanshsingh/react-native-audio-player` package using npm or yarn:
 
-1. Install React Native dependencies:
-
-   ```bash
-   npm install react-native
+```sh
+npm install @shreyanshsingh/react-native-audio-player
